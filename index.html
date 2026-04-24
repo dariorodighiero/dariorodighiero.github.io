@@ -5,61 +5,71 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dario Rodighiero | Creative Pianist Dublin</title>
 
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
 <style>
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-  color: #222;
+  font-family: 'Inter', sans-serif;
+  color: #2c2c2c;
+  background: #faf8f6;
 }
 
 /* HERO */
 .hero {
-  height: 90vh;
-  background: url('https://images.unsplash.com/photo-1513883049090-d0b7439799bf') center/cover no-repeat;
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
+  min-height: 90vh;
+}
+
+.hero-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
+  padding: 60px;
+  background: #1f1f1f;
   color: white;
-  text-align: center;
 }
 
-.hero-overlay {
-  background: rgba(0,0,0,0.5);
-  padding: 40px;
-}
-
-h1 {
+.hero-text h1 {
+  font-family: 'Playfair Display', serif;
   font-size: 3em;
   margin-bottom: 10px;
 }
 
-h2 {
-  margin-bottom: 10px;
+.hero-image {
+  flex: 1;
+  background: url('YOUR_PHOTO.jpg') center/cover no-repeat;
 }
 
+/* SECTIONS */
 section {
   max-width: 900px;
   margin: auto;
   padding: 60px 20px;
 }
 
-.dark {
-  background: #f7f3ef;
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2em;
+  margin-bottom: 15px;
 }
 
+.alt {
+  background: #f1ebe5;
+}
+
+/* CTA */
 .cta {
   display: inline-block;
   margin-top: 20px;
   padding: 12px 24px;
-  background: #d4a373;
+  background: #c08a5d;
   color: white;
   text-decoration: none;
-  font-weight: bold;
-}
-
-/* SERVICES */
-.service {
-  margin-bottom: 40px;
+  font-weight: 500;
 }
 
 /* VIDEO */
@@ -67,11 +77,17 @@ iframe {
   width: 100%;
   height: 315px;
   margin-top: 20px;
+  border: none;
+}
+
+/* PRICING */
+.pricing p {
+  margin-bottom: 20px;
 }
 
 /* FOOTER */
 footer {
-  background: #222;
+  background: #1f1f1f;
   color: white;
   text-align: center;
   padding: 30px;
@@ -83,12 +99,13 @@ footer {
 
 <!-- HERO -->
 <div class="hero">
-  <div class="hero-overlay">
+  <div class="hero-text">
     <h1>Dario Rodighiero</h1>
     <p>Creative Pianist • Improviser • Dublin</p>
-    <p>Piano music that adapts, listens, and comes alive in the moment</p>
+    <p>Piano music that adapts, listens, and comes alive in the moment.</p>
     <a class="cta" href="#contact">Book a Performance</a>
   </div>
+  <div class="hero-image"></div>
 </div>
 
 <!-- SERVICES -->
@@ -98,24 +115,30 @@ footer {
     Elegant, atmospheric piano for hotels, restaurants, and private events.
     Regular performer at The College Green Hotel Dublin.
   </p>
+  <p>
+    Whether you need subtle background ambience or a more expressive presence,
+    the music is always tailored to the moment.
+  </p>
 </section>
 
-<section class="dark">
+<section class="alt">
   <h2>Piano Lessons – A Creative Approach</h2>
   <p>
-    Learn to play freely, not just correctly. Develop your own musical voice.
+    Learn to play freely, not just correctly. These lessons focus on
+    improvisation, listening, and developing your own musical voice.
   </p>
 </section>
 
 <section>
   <h2>Piano Recording & Collaboration</h2>
   <p>
-    Expressive piano recordings for songwriters and artists.
+    Expressive piano recordings for songwriters and artists, with a flexible
+    and collaborative approach to sound and arrangement.
   </p>
 </section>
 
 <!-- VIDEO -->
-<section class="dark">
+<section class="alt">
   <h2>Watch & Listen</h2>
   <iframe src="https://www.youtube.com/embed/YOUR_VIDEO"></iframe>
 </section>
@@ -124,18 +147,29 @@ footer {
 <section>
   <h2>About</h2>
   <p>
-    Italian pianist based in Dublin, specialising in improvisation and
-    expressive live performance. My work focuses on creating music that
-    responds to each moment and environment.
+    I am an Italian pianist based in Dublin, specialising in improvisation and
+    expressive performance. My work is centred on creating music that responds
+    to each moment — whether in live settings, teaching, or recording sessions.
   </p>
 </section>
 
 <!-- PRICING -->
-<section class="dark">
-  <h2>Pricing</h2>
-  <p><strong>Events:</strong> €250 – €600</p>
-  <p><strong>Lessons:</strong> €40 – €60</p>
-  <p><strong>Recording:</strong> from €80</p>
+<section class="alt pricing">
+  <h2>Pricing & Packages</h2>
+
+  <p><strong>Live Piano for Events</strong><br>
+  From €250 to €600 depending on duration, location, and type of event.<br>
+  Ideal for weddings, receptions, corporate events, and private dinners.</p>
+
+  <p><strong>Piano Lessons</strong><br>
+  €40 (45 minutes) / €60 (60 minutes)<br>
+  First lesson available at a reduced rate.</p>
+
+  <p><strong>Recording Sessions</strong><br>
+  From €80 per track<br>
+  Custom arrangements and collaborative sessions available.</p>
+
+  <p><em>Feel free to get in touch for a personalised quote.</em></p>
 </section>
 
 <!-- CONTACT -->
@@ -143,6 +177,7 @@ footer {
   <h2>Contact</h2>
   <p>Email: your@email.com</p>
   <p>WhatsApp: your number</p>
+  <p>Available for bookings, lessons, and collaborations.</p>
 </section>
 
 <footer>
