@@ -21,7 +21,6 @@ body {
   min-height: 90vh;
 }
 
-/* TEXT SIDE */
 .hero-text {
   width: 50%;
   display: flex;
@@ -34,13 +33,7 @@ body {
   overflow: hidden;
 }
 
-.hero-text h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 3em;
-  margin-bottom: 10px;
-}
-
-/* BACKGROUND REFLECTION */
+/* Subtle background reflection */
 .hero-text::before {
   content: "";
   position: absolute;
@@ -53,12 +46,18 @@ body {
   z-index: 0;
 }
 
+/* Keep text above overlay */
 .hero-text * {
   position: relative;
   z-index: 1;
 }
 
-/* IMAGE SIDE */
+.hero-text h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
 .hero-image {
   width: 50%;
   background-image: url('./imgs/profile.jpeg');
