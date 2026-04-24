@@ -21,6 +21,7 @@ body {
   min-height: 90vh;
 }
 
+/* TEXT SIDE */
 .hero-text {
   width: 50%;
   display: flex;
@@ -29,15 +30,42 @@ body {
   padding: 60px;
   background: #1f1f1f;
   color: white;
+  position: relative;
+  overflow: hidden;
 }
 
+.hero-text h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+/* BACKGROUND REFLECTION */
+.hero-text::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('./imgs/profile.jpeg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.05;
+  transform: scaleX(-1);
+  z-index: 0;
+}
+
+.hero-text * {
+  position: relative;
+  z-index: 1;
+}
+
+/* IMAGE SIDE */
 .hero-image {
   width: 50%;
   background-image: url('./imgs/profile.jpeg');
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  background-color: #000;
+  background-color: #faf8f6;
 }
 
 /* SECTIONS */
@@ -88,6 +116,27 @@ footer {
   text-align: center;
   padding: 30px;
 }
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+  }
+
+  .hero-text, .hero-image {
+    width: 100%;
+  }
+
+  .hero-text {
+    padding: 40px 20px;
+  }
+
+  .hero-image {
+    height: 400px;
+    background-size: cover;
+    background-position: center top;
+  }
+}
 </style>
 </head>
 
@@ -104,7 +153,7 @@ footer {
   <div class="hero-image"></div>
 </div>
 
-<!-- ATMOSPHERE SECTION -->
+<!-- ATMOSPHERE -->
 <section class="alt">
   <h2>Creating the right atmosphere</h2>
   <p>
