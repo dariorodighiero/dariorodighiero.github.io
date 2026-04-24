@@ -7,99 +7,104 @@
 
 <style>
 body {
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   color: #222;
-  background: #fff;
 }
 
-header {
-  background: #0d0d0d;
+/* HERO */
+.hero {
+  height: 90vh;
+  background: url('https://images.unsplash.com/photo-1513883049090-d0b7439799bf') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: white;
   text-align: center;
-  padding: 80px 20px;
 }
 
-h1 { font-size: 2.5em; margin-bottom: 10px; }
-h2 { margin-bottom: 10px; }
+.hero-overlay {
+  background: rgba(0,0,0,0.5);
+  padding: 40px;
+}
+
+h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
 
 section {
   max-width: 900px;
   margin: auto;
-  padding: 50px 20px;
+  padding: 60px 20px;
+}
+
+.dark {
+  background: #f7f3ef;
 }
 
 .cta {
   display: inline-block;
   margin-top: 20px;
   padding: 12px 24px;
-  background: white;
-  color: #0d0d0d;
+  background: #d4a373;
+  color: white;
   text-decoration: none;
   font-weight: bold;
 }
 
-.dark {
-  background: #f7f7f7;
-}
-
+/* SERVICES */
 .service {
   margin-bottom: 40px;
 }
 
-.video {
-  margin: 20px 0;
-}
-
+/* VIDEO */
 iframe {
   width: 100%;
   height: 315px;
-  border: none;
+  margin-top: 20px;
 }
 
+/* FOOTER */
 footer {
+  background: #222;
+  color: white;
   text-align: center;
   padding: 30px;
-  background: #f0f0f0;
 }
 </style>
 </head>
 
 <body>
 
-<header>
-  <h1>Dario Rodighiero</h1>
-  <p>Creative Pianist • Improviser • Dublin</p>
-  <p>Piano music that adapts, listens, and comes alive in the moment</p>
-  <a class="cta" href="#contact">Book a Performance</a>
-</header>
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-overlay">
+    <h1>Dario Rodighiero</h1>
+    <p>Creative Pianist • Improviser • Dublin</p>
+    <p>Piano music that adapts, listens, and comes alive in the moment</p>
+    <a class="cta" href="#contact">Book a Performance</a>
+  </div>
+</div>
 
+<!-- SERVICES -->
 <section>
   <h2>Live Piano for Events</h2>
   <p>
     Elegant, atmospheric piano for hotels, restaurants, and private events.
     Regular performer at The College Green Hotel Dublin.
   </p>
-
-  <div class="service">
-    <strong>Ideal for:</strong>
-    <ul>
-      <li>Weddings & receptions</li>
-      <li>Corporate events</li>
-      <li>Private dinners</li>
-    </ul>
-  </div>
 </section>
 
 <section class="dark">
   <h2>Piano Lessons – A Creative Approach</h2>
-  <p>Learn to play freely, not just correctly.</p>
-
-  <ul>
-    <li>Improvisation-focused lessons</li>
-    <li>Beginners & intermediate</li>
-    <li>Online or in Dublin</li>
-  </ul>
+  <p>
+    Learn to play freely, not just correctly. Develop your own musical voice.
+  </p>
 </section>
 
 <section>
@@ -107,56 +112,37 @@ footer {
   <p>
     Expressive piano recordings for songwriters and artists.
   </p>
-
-  <ul>
-    <li>Studio or remote sessions</li>
-    <li>Improvised arrangements</li>
-    <li>Fast turnaround</li>
-  </ul>
 </section>
 
+<!-- VIDEO -->
 <section class="dark">
   <h2>Watch & Listen</h2>
-
-  <div class="video">
-    <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_1"></iframe>
-  </div>
-
-  <div class="video">
-    <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_2"></iframe>
-  </div>
-
+  <iframe src="https://www.youtube.com/embed/YOUR_VIDEO"></iframe>
 </section>
 
+<!-- ABOUT -->
 <section>
   <h2>About</h2>
   <p>
-    I am an Italian pianist based in Dublin, specialising in improvisation.
-    My work focuses on creating music that responds to each moment,
-    whether in live performance, teaching, or collaboration.
+    Italian pianist based in Dublin, specialising in improvisation and
+    expressive live performance. My work focuses on creating music that
+    responds to each moment and environment.
   </p>
 </section>
 
+<!-- PRICING -->
 <section class="dark">
-  <h2>Pricing & Packages</h2>
-
-  <p><strong>Live Events</strong><br>
-  From €250 – €600 depending on duration and location</p>
-
-  <p><strong>Piano Lessons</strong><br>
-  €40 (45 min) / €60 (60 min)</p>
-
-  <p><strong>Recording Sessions</strong><br>
-  From €80 per track</p>
-
-  <p><em>Custom quotes available on request</em></p>
+  <h2>Pricing</h2>
+  <p><strong>Events:</strong> €250 – €600</p>
+  <p><strong>Lessons:</strong> €40 – €60</p>
+  <p><strong>Recording:</strong> from €80</p>
 </section>
 
+<!-- CONTACT -->
 <section id="contact">
   <h2>Contact</h2>
   <p>Email: your@email.com</p>
   <p>WhatsApp: your number</p>
-  <p>Send a message for bookings, lessons, or collaborations.</p>
 </section>
 
 <footer>
